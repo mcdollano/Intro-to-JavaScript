@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Exercise 2</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<h1 id="heading1">JavaScript can hide/show HTML elements</h1>
+
+	<button id="hideBtn">Hide All</button>
+	<button id="showBtn">Show All</button>
+
+	<script type="text/javascript">
+		
+		$('#hideBtn').click(function(){
+			$('#heading1').hide()
+		});
+
+		$('#showBtn').click(function(){
+			$('#heading1').show()
+		});
+
+
+	</script>
+
+	<hr>
+
+	<h1 id="heading2">JavaScript Can Change HTML Content</h1>
+
+	<button id="change_content">Change HTML Content</button>
+
+	<script type="text/javascript">
+		
+		$ ('#change_content').click(function(){
+			$('#heading2').html('HELLO')
+		});
+
+	</script>
+
+	<hr>
+
+	<img src="macbookair.png" id="image_macbook" width="200" height="100">
+
+	<button id="change_height">Change image height</button>
+	<button id="change_width">Change image height</button>
+
+	<script type="text/javascript">
+		
+		$ ('#change_height').click(function(){
+			$('#image_macbook').attr('height', 400)
+		});
+
+		$ ('#change_width').click(function(){
+			$('#image_macbook').attr('width', 400)
+		})
+
+	</script>
+
+	<hr>
+
+	<h1 id="heading_styles">JavaScript can change HTML Styles</h1>
+
+	<button id="change_styles">Change Style</button>
+
+	<script type="text/javascript">
+
+		$ ('#change_styles').click(function(){
+			$('#heading_styles').css({"font-size":100, "color": 'blue', 
+				"background-color": "yellow"});
+		});
+
+	</script>
+
+	<hr> <!--calculator-->
+
+	<h1 id="heading_calculator">JavaScript can get and manipulate HTML Elements</h1>
+
+	<input type="number" id="num1"> + 
+	<input type="number" id="num1"> =
+
+	<hr>
+
+	<button id="showBtn2" style="visibility: hidden;">Show All</button>
+	<button id="hideBtn2" style="visibility: hidden;">Hide All</button>
+
+	<hr>
+
+	<button id="fade_in" style="visibility: hidden;"> Fade In </button> 
+
+	<div class="test1">
+		<p>qwerty</p>
+		<p>asdfgh</p>  
+		<p>zxcvbn</p>
+	</div>
+
+	<script type="text/javascript">
+		$('p').click(function(){
+			$(this).fadeOut() 
+			$('#fade_in').show()
+			
+		});
+	</script>
+
+	<hr>
+
+	<div>
+		<button id="slideup"> Slide Up </button>
+		<button id="slidedown"> Slide Down </button>
+	</div>
+
+	<img src="macbookair.png" id="image_macbook2">
+
+	<script type="text/javascript">
+		$('#slideup').click(function(){
+			$('#image_macbook2').slideUp();
+			$(this).hide()
+			$('#slidedown').show()
+		
+
+		});
+		$('#slidedown').click(function(){
+			$('#image_macbook2').slideDown();
+			$(this).hide()
+			$('#slideup').show()
+		});
+
+	</script>
+
+	<hr>
+
+
+
+
+
+
+</body>
+</html>
+
